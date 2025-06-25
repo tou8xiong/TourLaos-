@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolikhamsai</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #00d9ff6c;
+            padding: 20px;
+            height: 100vh;
+            border-radius: 3px;
+            border: 3px solid rgb(255, 255, 255);
+            box-shadow: 1px 1px 20px 8px rgba(0, 0, 0, 0.401);
+
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 26px;
+            text-shadow: 1px 2px 3px rgb(255, 255, 255);
+            padding: 2px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 20px 0;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 25px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .sidebar a:hover {
+            border-radius: 3px;
+            background-color: rgba(3, 2, 2, 0.271);
+        }
+
+        .sidebar a.selected {
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.834);
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .places {}
+
+        #places img {
+            width: 450px;
+            height: 350px;
+        }
+
+        .patuxay {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 1000px;
+        }
+
+        .patuxay mark {
+            background-color: rgba(0, 128, 0, 0.508);
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+        .patuxay a {
+            background-color: rgba(0, 0, 0, 0.321);
+            padding: 10px;
+            border-radius: 20px;
+            float: right;
+        }
+
+        .Thatluang {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 1000px;
+        }
+
+        .Thatluang mark {
+            background-color: rgba(0, 128, 0, 0.508);
+            border-radius: 5px;
+            font-size: 17px;
+        }
+
+        #Introduction {
+            width: 100%;
+            height: 100%;
+        }
+
+        #Introduction img {
+            width: 1000px;
+            height: 530px;
+
+        }
+
+        .convienent {
+            margin-bottom: 50px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 50px;
+
+        }
+
+        td,
+        th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .higlight {
+            background-color: rgba(80, 191, 28, 0.593);
+        }
+
+        .airport {
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bus {
+            font-size: 17px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .trian {
+            list-style-type: none;
+        }
+
+        .centerthecontent {
+            display: grid;
+            justify-items: center;
+
+        }
+
+        .material-icons {
+            font-size: 45px;
+            text-shadow: 2px 3px 4px rgb(0, 0, 0);
+        }
+
+        .centerpalcesection {
+            display: grid;
+            justify-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Vientiane Capital</h2>
+        <a class="menu-item" onclick="showSection('Introduction',this)">Introduction</a>
+        <a class="menu-item" onclick="showSection('places',this)">places</a>
+        <a class="menu-item" onclick="showSection('hotels', this)">Hotels</a>
+        <a class="menu-item" onclick="showSection('restaurants', this)">Restaurants</a>
+
+    </div>
+    <div class="content">
+        <div id="Introduction" class="section active">
+            <h1>Vientiane Capital</h1>
+            <div class="centerthecontent">
+                <p style="font-size: 20px;">Vientiane is the capital city of Laos, located in the central part of the
+                    country along the <mark>Mekong River</mark>, right on the border with Thailand. It is the
+                    largest city in Laos and serves as the political, cultural, and economic center of the country.</p>
+                <div><img src="-Vientiane-800x533.jpg"></div>
+                <div class="convienent">
+                    <h2>Transportation</h2>
+                    <h3><i class="material-icons" style="color: rgb(255, 0, 0);">airplanemode_active</i>By Domestic
+                        Flights (<a href="https://maps.app.goo.gl/ffsorRp2aSmGjzJHA" style="text-decoration: none;">from
+                            Wattay Airport</a>)</h3>
+                    <table class="airport">
+                        <tr class="higlight">
+                            <th>Province</th>
+                            <th>Main City</th>
+                            <th>By Plane (Approx.)</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Luang Prabang</td>
+                            <td>Luang Prabang</td>
+                            <td>45 minutes</td>
+                            <td>Frequent daily flights</td>
+
+                        </tr>
+                        <tr>
+                            <td>Champasak</td>
+                            <td>Pakse</td>
+                            <td>1 hour 20 minutes</td>
+                            <td>Longest regular domestic flight</td>
+
+                        </tr>
+                        <tr>
+                            <td>Savannakhet</td>
+                            <td>Savannakhet</td>
+                            <td>1 hour</td>
+                            <td>Usually 1 flight per day</td>
+                        </tr>
+                        <tr>
+                            <td>Xieng Khouang</td>
+                            <td>Phonsavan</td>
+                            <td>45 minutes</td>
+                            <td>Small aircraft flights</td>
+                        </tr>
+                        <tr>
+                            <td>Luang Namtha </td>
+                            <td>Luang Namtha </td>
+                            <td>1 hour </td>
+                            <td>Limited schedule</td>
+                        </tr>
+                        <tr>
+                            <td>Oudomxay</td>
+                            <td>Oudomxay</td>
+                            <td>1 hour</td>
+                            <td>Small airport, not daily</td>
+                        </tr>
+                        <tr>
+                            <td>Houaphan</td>
+                            <td>Sam Neua </td>
+                            <td>1 hour </td>
+                            <td>Very limited flights</td>
+                        </tr>
+                        <tr>
+                            <td>Phongsaly</td>
+                            <td>Houayxai (via Bokeo)</td>
+                            <td>1 hr to Houayxai + 4 hrs road </td>
+                            <td>No direct flights</td>
+                        </tr>
+                        <tr>
+                            <td>Xayabouly</td>
+                            <td>Xayabouly town </td>
+                            <td>No flights </td>
+                            <td>Road only</td>
+                        </tr>
+
+                    </table>
+                    <h3><i class="material-icons" style="color: rgb(0, 255, 0);">directions_bus</i>By Road (Bus or
+                        Private Vehicle)</h3>
+                    <table class="bus">
+                        <tr class="higlight">
+                            <th>Province</th>
+                            <th>Main City</th>
+                            <th>Approx. Travel Time (Hours)</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tr>
+                            <td>Luang Prabang</td>
+                            <td>Luang Prabang</td>
+                            <td>8–10 hrs</td>
+                            <td>Winding roads, beautiful views</td>
+                        </tr>
+                        <tr>
+                            <td>Oudomxay</td>
+                            <td>Muang Xay</td>
+                            <td>11–13 hrs</td>
+                            <td>Northern mountainous area</td>
+                        </tr>
+                        <tr>
+                            <td>Luang Namtha</td>
+                            <td>Luang Namtha</td>
+                            <td>14–16 hrs</td>
+                            <td>Remote, northernmost provinces</td>
+                        </tr>
+                        <tr>
+                            <td>Bokeo</td>
+                            <td>Houayxai</td>
+                            <td>13–15 hrs</td>
+                            <td>Border with Thailand</td>
+                        </tr>
+                        <tr>
+                            <td>Phongsaly</td>
+                            <td>Phongsaly</td>
+                            <td>20–22 hrs</td>
+                            <td>Furthest north, slow roads</td>
+                        </tr>
+                        <tr>
+                            <td>Xayabouly</td>
+                            <td>Xayabouly</td>
+                            <td>7–9 hrs</td>
+                            <td>No airport, all road</td>
+                        </tr>
+                        <tr>
+                            <td>Xieng Khouang</td>
+                            <td>Phonsavan</td>
+                            <td>8–9 hrs</td>
+                            <td>Curvy roads through mountains</td>
+                        </tr>
+                        <tr>
+                            <td>Houaphan</td>
+                            <td>Sam Neua</td>
+                            <td>15–18 hrs</td>
+                            <td>Far east, road condition varies</td>
+                        </tr>
+                        <tr>
+                            <td>Vientiane Province</td>
+                            <td>Vang Vieng</td>
+                            <td>2.5–3.5 hrs</td>
+                            <td>Good road, popular tourist stop</td>
+                        </tr>
+                        <tr>
+                            <td>Bolikhamxay</td>
+                            <td>Paksan</td>
+                            <td>3.5–4 hrs</td>
+                            <td>Southeast of Vientiane</td>
+                        </tr>
+                        <tr>
+                            <td>Khammouane</td>
+                            <td>Thakhek</td>
+                            <td>7–8 hrs</td>
+                            <td>Central Laos, along Route 13</td>
+                        </tr>
+                        <tr>
+                            <td>Savannakhet</td>
+                            <td>Savannakhet</td>
+                            <td>9–11 hrs</td>
+                            <td>Route 13 South</td>
+                        </tr>
+                        <tr>
+                            <td>Salavan</td>
+                            <td>Salavan</td>
+                            <td>12–13 hrs</td>
+                            <td>Southern Laos</td>
+                        </tr>
+                        <tr>
+                            <td>Sekong</td>
+                            <td>Sekong</td>
+                            <td>14–15 hrs</td>
+                            <td>Remote and mountainous</td>
+                        </tr>
+                        <tr>
+                            <td>Attapeu</td>
+                            <td>Attapeu</td>
+                            <td>15–17 hrs</td>
+                            <td>Southernmost province</td>
+                        </tr>
+                        <tr>
+                            <td>Champasak</td>
+                            <td>Pakse</td>
+                            <td>12–14 hrs</td>
+                            <td>Major southern city</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+                    </table>
+                    <h3><i class="material-icons" style="color: blue;">train</i>Laos-China High-Speed Railway (from
+                        Vientiane Station)</h3>
+                    <ul class="trian">
+                        <li>Vientiane to Luang Prabang: ~2 hours</li>
+                        <li> Vientiane to Oudomxay: ~4.5 hours</li>
+                        <li>Vientiane to Boten (China border): ~6–7 hours </li>
+                        <li>Not available to southern provinces like Savannakhet or Pakse</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="places" class="section">
+            <div class="centerpalcesection">
+                <div class="patuxay">
+                    <h1>Patuxay</h1>
+                    <img src="patuxai-literally-meaning-victory-gate-in-vientiane-.jpg">
+                    <h3> about Patuxay</h3>
+
+                    <mark>Name:</mark> Patuxay (Victory Gate)<br>
+
+                    <mark>Location:</mark> Vientiane, Laos<br>
+
+                    <mark>Built:</mark> Between 1957 and 1968<br>
+
+                    <mark>Purpose:</mark> To honour Laotian soldiers who died during World War II and the war for
+                    independence from
+                    France<br>
+
+                    <mark>Height:</mark> About 49 meters (160 feet)
+                    <a href="https://maps.app.goo.gl/FJea1RHxyMgueVcV9">Location</a>
+                </div>
+                <div class="Thatluang">
+                    <h1>Thatluang</h1>
+                    <img src="that luang555.jpg">
+
+                    <h3>about Patuxay</h3>
+
+                    <mark>Name:</mark> Patuxay (Victory Gate)<br>
+
+                    <mark>Location:</mark> Vientiane, Laos<br>
+
+                    <mark>Built:</mark> Between 1957 and 1968<br>
+
+                    <mark>Purpose:</mark> To honour Laotian soldiers who died during World War II and the war for
+                    independence from
+                    France<br>
+
+                    <mark>Height:</mark> About 49 meters (160 feet)
+                    <a href="https://maps.app.goo.gl/FJea1RHxyMgueVcV9">Location</a>
+                </div>
+                <div class="patuxay">
+                    <h1>Buddha Park (Wat Xieng Khouane Luang)</h1>
+                    <img src="xieng khuehg.jpg">
+                    <h3>about Patuxay Wat Xieng Khouane Luang </h3>
+
+                    <mark>Name:</mark> Patuxay (Victory Gate)<br>
+
+                    <mark>Location:</mark>25 km southeast of Vientiane, near the Mekong River<br>
+
+                    <mark>Built:</mark>In 1958 by Luang Pu Bunleua Sulilat<br>
+
+                    <mark>Purpose:</mark>Luang Pu Bunleua Sulilat was very spiritual and believed in combining Buddhism
+                    and Hinduism together<br>
+
+                    <mark>What makes it special?:</mark><br>
+                    The park has over 200 statues made of concrete.<br>
+                    They include Buddhas, Hindu gods, animals, demons, and mythical creatures.<br>
+                    One of the main highlights is a huge Reclining Buddha statue, which is very impressive.
+
+
+                    <a href="https://maps.app.goo.gl/ZAkGoF6mBHTnX7Pe6">Location</a>
+                </div>
+
+            </div>
+        </div>
+        <div id="hotels" class="section">
+            <h1>Hotels</h1>
+            <p>Top-rated places to stay in the city.</p>
+        </div>
+        <div id="restaurants" class="section">
+            <h1>Restaurants</h1>
+            <p>Best places to eat local and international cuisine.</p>
+        </div>
+    </div>
+
+    <script>
+        /*
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }*/
+
+        function showSection(id, element) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+
+            // Remove 'selected' class from all links
+            document.querySelectorAll('.menu-item').forEach(link => {
+                link.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked one
+            element.classList.add('selected');
+        }
+
+    </script>
+</body>
+
+</html>
